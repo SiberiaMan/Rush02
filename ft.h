@@ -36,7 +36,7 @@ int				ft_strcmp(char *s1, char *s2);
 int				check_data(t_dict_data *data);
 int				valid_str(char *str, int cur_in);
 int				valid_dict(char *str);
-int				enter_dict(char *namefile, char *str_dict);
+int				enter_dict(char *str_dict);
 void			fill_numbers_data(t_dict_data *data);
 void			free_function(char **srcs, char *str_dict,
 				char *str_valid, char **matrix);
@@ -56,18 +56,18 @@ void			ft_strcpy_sort(char *str_valid, char *str, int cur_index);
 void			ft_find_data(t_dict_data *data, char **srcs, char *str);
 void			sort_struct(t_dict_data *data, char *str_valid, char **srcs,
 				char **matrix);
-void			pre_sort_struct(t_dict_data *data, char *namefile,
-char *str_valid, char *str_dict);
+void			pre_sort_struct(t_dict_data *data, char *str_valid, char
+*str_dict);
 int				ft_strlen_data(char *str, int fl);
 int				value_index(int cur_in, char *srcs);
 int				fill_data_first(t_dict_data *data, int size, char *srcs);
 void			fill_data_last(t_dict_data *data, char *srcs, int index);
 void			store_data(t_dict_data *data, char *srcs);
-int				f_s(char *str);
 void			dividing(t_tripple *arr, int length, int tripples, char *str);
 void			print_space_hundreds(t_tripple *arr, int index);
 void			print_space_tens_f(int index);
 void			print_space_tens_s(t_tripple *arr, int index);
+int			f_s(char *s);
 void			print_space_ones(int index);
 void			find_word(t_dict_data *data, int index);
 int				check_value(char *str);

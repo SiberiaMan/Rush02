@@ -1,7 +1,5 @@
 SRC = algorithm.c print_space.c value_processing.c kernel.c init_tripple.c main.c store_data.c sort_struct.c check_data.c checkout_dict.c fill_numbers_data.c free_function.c ft_putstr.c ft_split.c check_value.c to_alg.c 
 
-HED = ft.h
-
 OBJ = ${SRC:.c=.o}
 
 NAME = rush-02

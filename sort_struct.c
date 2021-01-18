@@ -86,19 +86,15 @@ void		sort_struct(t_dict_data *data, char *str_valid, char **srcs,
 	}
 }
 
-void		pre_sort_struct(t_dict_data *data, char *namefile,
-char *str_valid, char *str_dict)
+void		pre_sort_struct(t_dict_data *data, char *str_valid, char *str_dict)
 {
 	int		fd_dict;
 	int		fd_valid;
 	char	**srcs;
 	char	**matrix;
 
-	if (namefile == 0)
-	{
-		fd_dict = open("/home/phili/Desktop/Rush02/valid_dict", O_RDONLY);
-		read(fd_dict, str_dict, 30000);
-	}
+	fd_dict = open("/home/phili/Desktop/Rush02/valid_dict", O_RDONLY);
+	read(fd_dict, str_dict, 30000);
 	fd_valid = open("/home/phili/Desktop/Rush02/Mask", O_RDONLY);
 	read(fd_valid, str_valid, 30000);
 	srcs = (char **)malloc(sizeof(char*) * count_words(str_dict) + 1);

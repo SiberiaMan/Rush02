@@ -53,11 +53,11 @@ int			valid_dict(char *str)
 	return (1);
 }
 
-int			enter_dict(char *namefile, char *str_dict)
+int			enter_dict(char *str_dict)
 {
 	int fd;
 
-	fd = open(namefile, O_RDONLY);
+	fd = open("/home/phili/Desktop/Rush02/valid_dict", O_RDONLY);
 	if (fd == -1 || !read(fd, str_dict, 30000) || !valid_dict(str_dict))
 		return (0);
 	return (1);

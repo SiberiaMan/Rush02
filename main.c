@@ -19,22 +19,14 @@ int		main(int argc, char *argv[])
 	t_dict_data			*data;
 	t_tripple			*arr;
 
+	(void)argc;
 	arr = 0;
 	data = malloc(sizeof(t_dict_data) * 41);
 	str_valid = malloc(sizeof(char) * 30000);
 	str_dict = malloc(sizeof(char) * 30000);
-	if (argc == 3)
-		if (!enter_dict(argv[1], str_dict))
-			write(1, "Dict Error\n", 11);
-		else
-		{
-			pre_sort_struct(data, argv[1], str_valid, str_dict);
-			to_alg(arr, data, argv[1]);
-		}
-	else if (argc == 2)
-	{
-		pre_sort_struct(data, 0, str_valid, str_dict);
-		algorithm(arr, data, argv[1]);
-	}
+	if (!enter_dict(str_dict))
+		write(1, "Dict Error\n", 11);
+	pre_sort_struct(data, str_valid, str_dict);
+	algorithm(arr, data, argv[1]);
 	return (0);
 }
